@@ -1,11 +1,9 @@
 import time
 import sys
 import os
+import webbrowser
 from praw import Reddit
-from PyQt5.Qt import QApplication, QUrl, QDesktopServices, QSystemTrayIcon
 
-
-app = QApplication(sys.argv)
 
 reddit = Reddit(
     client_id=os.getenv('REDDIT_CLIENT_ID'),
@@ -18,6 +16,6 @@ while True:
     for submission in reddit.subreddit('learnpython').new(limit=5):
         if submission.num_comments == 0 and submission.url not in seen_submissions:
             seen_submissions.add(submission.url)
-            QDesktopServices.openUrl(QUrl(submission.url))
+            webbrowser.open_new_tab(submission.url)
     
     time.sleep(60)

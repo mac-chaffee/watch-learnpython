@@ -7,7 +7,6 @@ Opens the latest questions from /r/learnpython in your browser
 2. Install required packages:
 
 ```
-pip install --user PyQt5
 pip install --user praw
 ```
 
