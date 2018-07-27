@@ -1,5 +1,5 @@
 # watch-learnpython
-Opens the latest questions from /r/learnpython in your browser
+Opens the latest questions from /r/learnpython in your browser as soon as they appear!
 
 ## Installation Instructions
 
@@ -24,3 +24,5 @@ export REDDIT_CLIENT_SECRET=get this from https://www.reddit.com/prefs/apps
 ```
 python watch_learnpython.py
 ```
+
+Whenever someone makes a new post, it will automatically be opened in a new tab in your default browser.
